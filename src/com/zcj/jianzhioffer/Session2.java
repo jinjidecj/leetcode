@@ -28,6 +28,22 @@ public class Session2 {
         }
         return 0;
     }
+    //剑指 Offer 04. 二维数组中的查找
+    public boolean findNumberIn2DArray(int[][] matrix, int target) {
+
+        int height = matrix.length;
+        int width=0;
+        if(height==0){
+            return false;
+        }
+        width = matrix[0].length;
+        for(int i=0,j=width-1;i<height && j>0;){
+            if(matrix[i][j]==target) return true;
+            if(matrix[i][j]>target) j--;
+            else if(matrix[i][j]<target) i++;
+        }
+        return false;
+    }
 
     //剑指 Offer 05. 替换空格
     public String replaceSpace(String s) {
@@ -290,4 +306,6 @@ public class Session2 {
         }
         return count;
     }
+
+
 }

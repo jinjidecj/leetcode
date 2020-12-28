@@ -103,6 +103,7 @@ public class MyRecursion {
 //                location.set(k,temp.substring(0,i-1)+'.'+temp.substring(i+1));
                 location.set(k,subString(location.get(k),i,'.'));
             }
+            
         }
     }
     public String subString(String s,int i,char a){
